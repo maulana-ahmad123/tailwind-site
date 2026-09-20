@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langkah - Toko Sepatu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        'open-menu': {
+                            '0%': { transform: 'scaleY(0)' },
+                            '80%': { transform: 'scaleY(1.2)' },
+                            '100%': { transform: 'scaleY(1)' },
+                        },
+                    },
+                    animation: {
+                        'open-menu': 'open-menu 0.5s ease-in-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col">
+
+    <!-- Header & Navbar -->
+    <header class="bg-slate-800 text-white sticky top-0 z-20">
+        <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">
+                <a href="#hero">👟 Langkah</a>
+            </h1>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
+                <a href="#koleksi" class="hover:opacity-90">Koleksi</a>
+                <a href="#testimoni" class="hover:opacity-90">Testimoni</a>
+                <a href="#kontak" class="hover:opacity-90">Kontak</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="hamburger-button" class="md:hidden text-3xl cursor-pointer relative w-8 h-8">
+                <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"></div>
+            </button>
+        </section>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <section id="mobile-menu" class="absolute top-[68px] bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden z-10 min-h-screen">
+        <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+            <a href="#hero" class="w-full text-center py-6 hover:opacity-90 text-white">Beranda</a>
+            <a href="#koleksi" class="w-full text-center py-6 hover:opacity-90 text-white">Koleksi</a>
+            <a href="#testimoni" class="w-full text-center py-6 hover:opacity-90 text-white">Testimoni</a>
+            <a href="#kontak" class="w-full text-center py-6 hover:opacity-90 text-white">Kontak</a>
+        </nav>
+    </section>
+
+    <main class="max-w-4xl mx-auto flex-grow w-full">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="flex flex-col-reverse sm:flex-row justify-center items-center p-6 gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
+            <article class="sm:w-1/2">
+                <h2 class="max-w-md text-4xl font-bold text-center sm:text-left sm:text-5xl text-slate-900 mb-4">
+                    Melangkah Lebih Jauh Bersama <span class="text-indigo-700">Langkah</span>
+                </h2>
+                <p class="max-w-md text-2xl text-center sm:text-left text-slate-700 mt-4">
+                    Temukan sepatu sneakers, kasual, dan lari terbaik untuk menemani setiap petualanganmu setiap hari.
+                </p>
+            </article>
+            <div class="sm:w-1/2 text-9xl text-center shadow-2xl rounded-full bg-slate-200 p-10">
+                🏃‍♂️
+            </div>
+        </section>
+
+        <hr class="mx-auto bg-black w-1/2 h-1 rounded border-none">
+
+        <!-- Koleksi / Cards Section -->
+        <section id="koleksi" class="p-6 my-12 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900">Koleksi Kami</h2>
+            <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
+                
+                <li class="flex flex-col items-center border border-solid border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl w-2/3 sm:w-5/6">
+                    <div class="text-7xl mb-6">👟</div>
+                    <h3 class="text-3xl text-center text-slate-900">Klasik</h3>
+                    <p class="hidden sm:block text-2xl text-center mt-2 text-slate-500">$$</p>
+                    <p class="sm:hidden text-2xl text-center mt-2 text-slate-500">Gaya abadi sepanjang masa</p>
+                </li>
+                
+                <li class="flex flex-col items-center border border-solid border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl w-2/3 sm:w-5/6">
+                    <div class="text-7xl mb-6">🥾</div>
+                    <h3 class="text-3xl text-center text-slate-900">Petualang</h3>
+                    <p class="hidden sm:block text-2xl text-center mt-2 text-slate-500">$$$</p>
+                    <p class="sm:hidden text-2xl text-center mt-2 text-slate-500">Tangguh di segala medan</p>
+                </li>
+
+                <li class="flex flex-col items-center border border-solid border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl w-2/3 sm:w-5/6">
+                    <div class="text-7xl mb-6">👞</div>
+                    <h3 class="text-3xl text-center text-slate-900">Elegan</h3>
+                    <p class="hidden sm:block text-2xl text-center mt-2 text-slate-500">$$$$</p>
+                    <p class="sm:hidden text-2xl text-center mt-2 text-slate-500">Sempurna untuk acara formal</p>
+                </li>
+                
+            </ul>
+        </section>
+
+        <hr class="mx-auto bg-black w-1/2 h-1 rounded border-none">
+
+        <!-- Testimoni Section (dengan efek before/after quotes) -->
+        <section id="testimoni" class="p-6 my-12 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900">Testimoni Pelanggan</h2>
+            
+            <figure class="my-12">
+                <blockquote class="bg-indigo-700 text-white pl-14 pr-8 py-12 rounded-3xl relative before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:opacity-25 before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:opacity-25 after:-translate-x-2 after:-translate-y-2">
+                    <p class="text-2xl sm:text-3xl text-left mt-2">
+                        Sepatu dari Langkah benar-benar nyaman dipakai berlari. Desainnya juga keren banget. <span class="italic text-indigo-300">Sangat direkomendasikan!</span>
+                    </p>
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-600">
+                    &#8212; Budi Santoso
+                </figcaption>
+            </figure>
+            
+        </section>
+
+        <hr class="mx-auto bg-black w-1/2 h-1 rounded border-none">
+
+        <!-- Form Kontak -->
+        <section id="kontak" class="p-6 my-12 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900">Hubungi Kami</h2>
+            <form action="" class="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4">
+                <label for="subject">Subjek:</label>
+                <input type="text" id="subject" name="subject" required minlength="3" maxlength="60" placeholder="Subjek Pesan" class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900">
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required cols="30" rows="10" placeholder="Pesan Anda" class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900"></textarea>
+                
+                <button type="submit" class="bg-indigo-700 hover:bg-indigo-600 active:bg-indigo-500 text-white p-3 w-48 rounded-xl border border-solid border-slate-900">Kirim</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-slate-800 text-white text-xl">
+        <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between gap-8">
+            <address class="not-italic">
+                <h2 class="font-bold">Langkah Shoes Inc.</h2>
+                Jalan Mawar Merah No. 12<br>
+                Jakarta Selatan, 12345<br><br>
+                Email: <a href="mailto:halo@langkah.com">halo@langkah.com</a><br>
+                Telepon: <a href="tel:+628123456789">+62 812-3456-789</a>
+            </address>
+            <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+                <a href="#koleksi" class="hover:opacity-90">Koleksi</a>
+                <a href="#testimoni" class="hover:opacity-90">Testimoni</a>
+                <a href="#kontak" class="hover:opacity-90">Kontak</a>
+            </nav>
+            <div class="flex flex-col sm:gap-2">
+                <p class="text-right">Copyright &copy; <span id="year">2026</span></p>
+                <p class="text-right">Hak Cipta Dilindungi</p>
+            </div>
+        </section>
+    </footer>
+
+    <!-- JavaScript untuk Mobile Menu & Animasi -->
+    <script>
+        const initApp = () => {
+            const hamburgerBtn = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                // Manipulasi gaya tombol hamburger secara manual (karena kita tidak pakai file CSS terpisah untuk @apply)
+                const middleLine = hamburgerBtn.querySelector('div');
+                if (mobileMenu.classList.contains('flex')) {
+                    middleLine.classList.add('bg-transparent', 'rotate-[720deg]');
+                    middleLine.classList.remove('bg-white');
+                    middleLine.style.setProperty('--tw-bg-opacity', '0');
+                    middleLine.classList.replace('before:-translate-y-3', 'before:translate-y-0');
+                    middleLine.classList.replace('after:translate-y-3', 'after:translate-y-0');
+                    middleLine.classList.add('before:rotate-45', 'after:-rotate-45');
+                } else {
+                    middleLine.classList.remove('bg-transparent', 'rotate-[720deg]');
+                    middleLine.classList.add('bg-white');
+                    middleLine.style.removeProperty('--tw-bg-opacity');
+                    middleLine.classList.replace('before:translate-y-0', 'before:-translate-y-3');
+                    middleLine.classList.replace('after:translate-y-0', 'after:translate-y-3');
+                    middleLine.classList.remove('before:rotate-45', 'after:-rotate-45');
+                }
+            }
+
+            hamburgerBtn.addEventListener('click', toggleMenu);
+            mobileMenu.addEventListener('click', toggleMenu);
+        }
+
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
